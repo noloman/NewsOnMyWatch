@@ -17,6 +17,9 @@
 		07E23382276B32CB00126190 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E23381276B32CB00126190 /* ComplicationController.swift */; };
 		07E23384276B32CC00126190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E23383276B32CC00126190 /* Assets.xcassets */; };
 		07E23387276B32CC00126190 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E23386276B32CC00126190 /* Preview Assets.xcassets */; };
+		07E23399276B333000126190 /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E23398276B333000126190 /* NewsListView.swift */; };
+		07E2339C276B35BD00126190 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2339B276B35BD00126190 /* NewsDetailView.swift */; };
+		07E2339F276B35D300126190 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2339E276B35D300126190 /* News.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		07E23386276B32CC00126190 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		07E23388276B32CC00126190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07E23389276B32CC00126190 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		07E23398276B333000126190 /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
+		07E2339B276B35BD00126190 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
+		07E2339E276B35D300126190 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,8 @@
 		07E23378276B32CB00126190 /* NewsOnMyWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				07E2339D276B35C800126190 /* Model */,
+				07E23397276B331600126190 /* Views */,
 				07E23379276B32CB00126190 /* NewsOnMyWatchApp.swift */,
 				07E2337B276B32CB00126190 /* ContentView.swift */,
 				07E2337D276B32CB00126190 /* NotificationController.swift */,
@@ -137,6 +145,23 @@
 				07E23386276B32CC00126190 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		07E23397276B331600126190 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07E23398276B333000126190 /* NewsListView.swift */,
+				07E2339B276B35BD00126190 /* NewsDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		07E2339D276B35C800126190 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07E2339E276B35D300126190 /* News.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E2337E276B32CB00126190 /* NotificationController.swift in Sources */,
+				07E23399276B333000126190 /* NewsListView.swift in Sources */,
+				07E2339F276B35D300126190 /* News.swift in Sources */,
 				07E2337C276B32CB00126190 /* ContentView.swift in Sources */,
+				07E2339C276B35BD00126190 /* NewsDetailView.swift in Sources */,
 				07E23382276B32CB00126190 /* ComplicationController.swift in Sources */,
 				07E2337A276B32CB00126190 /* NewsOnMyWatchApp.swift in Sources */,
 				07E23380276B32CB00126190 /* NotificationView.swift in Sources */,
