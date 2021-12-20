@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07323E032770947F0021AA60 /* NewsApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07323E022770947F0021AA60 /* NewsApiError.swift */; };
 		07E2336A276B32C500126190 /* NewsOnMyWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 07E23369276B32C500126190 /* NewsOnMyWatch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07E2336F276B32CA00126190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E2336E276B32CA00126190 /* Assets.xcassets */; };
 		07E23375276B32CB00126190 /* NewsOnMyWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 07E23374276B32CB00126190 /* NewsOnMyWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -65,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07323E022770947F0021AA60 /* NewsApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiError.swift; sourceTree = "<group>"; };
 		07E23365276B32C500126190 /* NewsOnMyWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsOnMyWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E23369276B32C500126190 /* NewsOnMyWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NewsOnMyWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E2336E276B32CA00126190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07323E01277094650021AA60 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				07E2339D276B35C800126190 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		07E2335E276B32C500126190 = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +134,7 @@
 		07E23378276B32CB00126190 /* NewsOnMyWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				07E2339D276B35C800126190 /* Model */,
+				07323E01277094650021AA60 /* Data */,
 				07E23397276B331600126190 /* Views */,
 				07E23379276B32CB00126190 /* NewsOnMyWatchApp.swift */,
 				07E2337B276B32CB00126190 /* ContentView.swift */,
@@ -160,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				07E2339E276B35D300126190 /* News.swift */,
+				07323E022770947F0021AA60 /* NewsApiError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,6 +304,7 @@
 			files = (
 				07E2337E276B32CB00126190 /* NotificationController.swift in Sources */,
 				07E23399276B333000126190 /* NewsListView.swift in Sources */,
+				07323E032770947F0021AA60 /* NewsApiError.swift in Sources */,
 				07E2339F276B35D300126190 /* News.swift in Sources */,
 				07E2337C276B32CB00126190 /* ContentView.swift in Sources */,
 				07E2339C276B35BD00126190 /* NewsDetailView.swift in Sources */,
