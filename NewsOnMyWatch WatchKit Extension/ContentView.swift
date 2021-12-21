@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var newsViewModel = NewsViewModel()
     var body: some View {
-        NewsListView()
+        NewsListView(newsViewModel: newsViewModel)
     }
 }
 

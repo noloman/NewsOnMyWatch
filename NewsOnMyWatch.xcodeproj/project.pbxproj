@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07323E032770947F0021AA60 /* NewsApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07323E022770947F0021AA60 /* NewsApiError.swift */; };
+		07323E032770947F0021AA60 /* NewsApiErrorCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07323E022770947F0021AA60 /* NewsApiErrorCodable.swift */; };
+		07AA0E6B277203FE0054DFB2 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA0E6A277203FE0054DFB2 /* NewsViewModel.swift */; };
+		07AA0E6D27720A840054DFB2 /* NewsListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA0E6C27720A840054DFB2 /* NewsListRow.swift */; };
 		07E2336A276B32C500126190 /* NewsOnMyWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 07E23369276B32C500126190 /* NewsOnMyWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07E2336F276B32CA00126190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E2336E276B32CA00126190 /* Assets.xcassets */; };
 		07E23375276B32CB00126190 /* NewsOnMyWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 07E23374276B32CB00126190 /* NewsOnMyWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -20,7 +22,7 @@
 		07E23387276B32CC00126190 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E23386276B32CC00126190 /* Preview Assets.xcassets */; };
 		07E23399276B333000126190 /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E23398276B333000126190 /* NewsListView.swift */; };
 		07E2339C276B35BD00126190 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2339B276B35BD00126190 /* NewsDetailView.swift */; };
-		07E2339F276B35D300126190 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2339E276B35D300126190 /* News.swift */; };
+		07E2339F276B35D300126190 /* NewsApiCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2339E276B35D300126190 /* NewsApiCodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +68,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		07323E022770947F0021AA60 /* NewsApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiError.swift; sourceTree = "<group>"; };
+		07323E022770947F0021AA60 /* NewsApiErrorCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiErrorCodable.swift; sourceTree = "<group>"; };
+		07AA0E6A277203FE0054DFB2 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		07AA0E6C27720A840054DFB2 /* NewsListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListRow.swift; sourceTree = "<group>"; };
 		07E23365276B32C500126190 /* NewsOnMyWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsOnMyWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E23369276B32C500126190 /* NewsOnMyWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsOnMyWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E2336E276B32CA00126190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,7 +86,7 @@
 		07E23389276B32CC00126190 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		07E23398276B333000126190 /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
 		07E2339B276B35BD00126190 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
-		07E2339E276B35D300126190 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		07E2339E276B35D300126190 /* NewsApiCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiCodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,18 @@
 		07323E01277094650021AA60 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				07AA0E69277203E80054DFB2 /* Network */,
 				07E2339D276B35C800126190 /* Model */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		07AA0E69277203E80054DFB2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				07AA0E6A277203FE0054DFB2 /* NewsViewModel.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		07E2335E276B32C500126190 = {
@@ -162,6 +175,7 @@
 			children = (
 				07E23398276B333000126190 /* NewsListView.swift */,
 				07E2339B276B35BD00126190 /* NewsDetailView.swift */,
+				07AA0E6C27720A840054DFB2 /* NewsListRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,8 +183,8 @@
 		07E2339D276B35C800126190 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				07E2339E276B35D300126190 /* News.swift */,
-				07323E022770947F0021AA60 /* NewsApiError.swift */,
+				07E2339E276B35D300126190 /* NewsApiCodable.swift */,
+				07323E022770947F0021AA60 /* NewsApiErrorCodable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,13 +318,15 @@
 			files = (
 				07E2337E276B32CB00126190 /* NotificationController.swift in Sources */,
 				07E23399276B333000126190 /* NewsListView.swift in Sources */,
-				07323E032770947F0021AA60 /* NewsApiError.swift in Sources */,
-				07E2339F276B35D300126190 /* News.swift in Sources */,
+				07323E032770947F0021AA60 /* NewsApiErrorCodable.swift in Sources */,
+				07E2339F276B35D300126190 /* NewsApiCodable.swift in Sources */,
 				07E2337C276B32CB00126190 /* ContentView.swift in Sources */,
 				07E2339C276B35BD00126190 /* NewsDetailView.swift in Sources */,
 				07E23382276B32CB00126190 /* ComplicationController.swift in Sources */,
 				07E2337A276B32CB00126190 /* NewsOnMyWatchApp.swift in Sources */,
+				07AA0E6D27720A840054DFB2 /* NewsListRow.swift in Sources */,
 				07E23380276B32CB00126190 /* NotificationView.swift in Sources */,
+				07AA0E6B277203FE0054DFB2 /* NewsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +488,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -504,7 +520,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -528,7 +544,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -552,7 +568,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};

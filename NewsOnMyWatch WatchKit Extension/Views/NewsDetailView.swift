@@ -11,16 +11,16 @@ struct NewsDetailView: View {
     var news: News
     var body: some View {
         VStack {
-            Text(news.headline)
-            Text(news.body)
+            Text(news.title)
+            Text(news.newsDescription)
         }
         .padding()
     }
 }
 
-struct NewsDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        let news = News(headline: "Headline", body: "Body")
-        NewsDetailView(news: news)
-    }
-}
+//struct NewsDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let news = News(author: "", title: "Test title", newsDescription: "Test description", url: "", source: "", image: "", category: "", language: "", country: "", publishedAt: Date())
+//        NewsDetailView(news: news)
+//    }
+//}

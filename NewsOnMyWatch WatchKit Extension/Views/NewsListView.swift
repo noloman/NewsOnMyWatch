@@ -8,20 +8,12 @@
 import SwiftUI
 
 struct NewsListView: View {
-    @State var news: [News]
-    
-    init() {
-        var stateNews = [News]()
-        for i in 1..<100 {
-            stateNews.append(News(headline: "Headline #\(i)", body: "Body \(i)"))
-        }
-        _news = State(wrappedValue: stateNews)
-    }
+    @ObservedObject var newsViewModel: NewsViewModel
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(news) { (pieceOfNews: News) in
+                ForEach(newsViewModel.newsList) { pieceOfNews in
                     NewsListRow(pieceOfNews: pieceOfNews)
                         .padding()
                 }
@@ -32,28 +24,6 @@ struct NewsListView: View {
 
 struct NewsListView_Previews: PreviewProvider {
     static var previews: some View {
-        NewsListView()
-    }
-}
-
-struct NewsListRow: View {
-    @State var pieceOfNews: News
-    var body: some View {
-        NavigationLink {
-            NewsDetailView(news: pieceOfNews)
-        } label: {
-            HStack {
-                Image(systemName: "newspaper")
-                VStack {
-                    Text(pieceOfNews.headline)
-                        .font(.subheadline)
-                        .padding()
-                    Text(pieceOfNews.body)
-                        .font(.body)
-                        .padding()
-                        .lineLimit(2)
-                }
-            }
-        }
+        NewsListView(newsViewModel: NewsViewModel())
     }
 }

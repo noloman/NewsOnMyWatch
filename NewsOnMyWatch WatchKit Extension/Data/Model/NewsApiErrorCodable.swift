@@ -13,7 +13,7 @@
 import Foundation
 
 // MARK: - NewsAPIError
-struct NewsAPIError: Codable {
+struct NewsApiError: Codable {
     let error: Error
 }
 
