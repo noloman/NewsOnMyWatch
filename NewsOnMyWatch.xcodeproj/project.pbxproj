@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07323E032770947F0021AA60 /* NewsApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07323E022770947F0021AA60 /* NewsApiError.swift */; };
-		07E2336A276B32C500126190 /* NewsOnMyWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 07E23369276B32C500126190 /* NewsOnMyWatch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		07E2336A276B32C500126190 /* NewsOnMyWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 07E23369276B32C500126190 /* NewsOnMyWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07E2336F276B32CA00126190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E2336E276B32CA00126190 /* Assets.xcassets */; };
 		07E23375276B32CB00126190 /* NewsOnMyWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 07E23374276B32CB00126190 /* NewsOnMyWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07E2337A276B32CB00126190 /* NewsOnMyWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E23379276B32CB00126190 /* NewsOnMyWatchApp.swift */; };
@@ -58,7 +58,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				07E2336A276B32C500126190 /* NewsOnMyWatch WatchKit App.app in Embed Watch Content */,
+				07E2336A276B32C500126190 /* NewsOnMyWatch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +68,7 @@
 /* Begin PBXFileReference section */
 		07323E022770947F0021AA60 /* NewsApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiError.swift; sourceTree = "<group>"; };
 		07E23365276B32C500126190 /* NewsOnMyWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsOnMyWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		07E23369276B32C500126190 /* NewsOnMyWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NewsOnMyWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E23369276B32C500126190 /* NewsOnMyWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsOnMyWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E2336E276B32CA00126190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07E23374276B32CB00126190 /* NewsOnMyWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NewsOnMyWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E23379276B32CB00126190 /* NewsOnMyWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsOnMyWatchApp.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				07E23365276B32C500126190 /* NewsOnMyWatch.app */,
-				07E23369276B32C500126190 /* NewsOnMyWatch WatchKit App.app */,
+				07E23369276B32C500126190 /* NewsOnMyWatch.app */,
 				07E23374276B32CB00126190 /* NewsOnMyWatch WatchKit Extension.appex */,
 			);
 			name = Products;
@@ -209,7 +209,7 @@
 			);
 			name = "NewsOnMyWatch WatchKit App";
 			productName = "NewsOnMyWatch WatchKit App";
-			productReference = 07E23369276B32C500126190 /* NewsOnMyWatch WatchKit App.app */;
+			productReference = 07E23369276B32C500126190 /* NewsOnMyWatch.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		07E23373276B32CB00126190 /* NewsOnMyWatch WatchKit Extension */ = {
@@ -519,11 +519,10 @@
 				DEVELOPMENT_TEAM = 2357A78TMR;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = NewsOnMyWatch_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "NewsOnMyWatch WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nulltwenty.NewsOnMyWatch.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NewsOnMyWatch;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -544,11 +543,10 @@
 				DEVELOPMENT_TEAM = 2357A78TMR;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = NewsOnMyWatch_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "NewsOnMyWatch WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nulltwenty.NewsOnMyWatch.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NewsOnMyWatch;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
