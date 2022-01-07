@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct NewsDetailView: View {
-    var news: News
+    var news: ArticleCodable
     var body: some View {
         VStack {
             Text(news.title)
-            Text(news.newsDescription)
+            Text(news.articleDescription!)
         }
         .padding()
     }

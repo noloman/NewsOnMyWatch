@@ -2,41 +2,57 @@
 //  NewsApiError.swift
 //  NewsOnMyWatch WatchKit Extension
 //
-//  Created by WF06FC on 20/12/2021.
+//  Created by Manuel Lorenzo Parejo (NullTwenty) on 20/12/2021.
 //
-
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let newsAPIError = try? newJSONDecoder().decode(NewsAPIError.self, from: jsonData)
-
 import Foundation
 
-// MARK: - NewsAPIError
-struct NewsApiError: Codable {
-    let error: Error
+// MARK: - NewsResponseCodable
+struct NewsResponseCodable: Codable {
+    let status: String
+    let totalResults: Int
+    let articles: [ArticleCodable]
 }
 
-// MARK: - Error
-struct Error: Codable {
-    let code, message: String
-    let context: Context
+// MARK: - Article
+struct ArticleCodable: Codable, Equatable, Identifiable {
+    var id: String {
+        url
+    }
+    let source: SourceCodable
+    let author: String?
+    let title: String
+    let articleDescription: String?
+    let url: String
+    let urlToImage: String?
+    let publishedAt: Date
+    let content: String?
+
+    enum CodingKeys: String, CodingKey {
+        case source, author, title
+        case articleDescription = "description"
+        case url, urlToImage, publishedAt, content
+    }
 }
 
-// MARK: - Context
-struct Context: Codable {
-    let date: [ContextError]
+// MARK: - Source
+struct SourceCodable: Codable, Identifiable, Equatable {
+    let id: String?
+    let name: String
 }
 
-enum ContextError: String, Codable {
-case invalid_access_key,
-    missing_access_key,
-    inactive_user,
-    https_access_restricted,
-    function_access_restricted,
-    invalid_api_function,
-    not_found = "404_not_found",
-    usage_limit_reached,
-    rate_limit_reached,
-    internal_error
+enum Country: String, Codable {
+    case spain = "es"
+    case egypt = "eg"
+    case ma = "ma"
+    case iq = "iq"
+    case sd = "sd"
+    case ps = "ps"
+    case qatar = "qa"
+    case us
+    case nl
+}
+
+enum Language: String, Codable {
+    case spanish = "es"
+    case arab = "ar"
 }

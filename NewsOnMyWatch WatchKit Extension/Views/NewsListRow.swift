@@ -2,19 +2,19 @@
 //  NewsListRow.swift
 //  NewsOnMyWatch WatchKit Extension
 //
-//  Created by WF06FC on 21/12/2021.
+//  Created by Manuel Lorenzo Parejo (NullTwenty) on 21/12/2021.
 //
 
 import SwiftUI
 
 struct NewsListRow: View {
-    @State var pieceOfNews: News
+    @State var pieceOfNews: ArticleCodable
     var body: some View {
         NavigationLink {
             NewsDetailView(news: pieceOfNews)
         } label: {
             HStack {
-                if let image = pieceOfNews.image {
+                if let image = pieceOfNews.urlToImage {
                     AsyncImage(url: URL(string: image))
                 }
                 VStack {
@@ -22,7 +22,7 @@ struct NewsListRow: View {
                         .font(.subheadline)
                         .padding()
                     Spacer()
-                    Text(pieceOfNews.newsDescription)
+                    Text(pieceOfNews.articleDescription!)
                         .font(.body)
                         .padding()
                 }
@@ -33,6 +33,6 @@ struct NewsListRow: View {
 
 struct NewsListRow_Previews: PreviewProvider {
     static var previews: some View {
-        NewsListRow(pieceOfNews: News(author: "", title: "", newsDescription: "", url: "", source: "", image: "", category: .general, language: .spanish, country: .spain, publishedAt: Date()))
+        NewsListRow(pieceOfNews: ArticleCodable(source: .init(id: "1", name: "Source name"), author: "Author", title: "Title", articleDescription: "Description", url: "url", urlToImage: nil, publishedAt: Date.now, content: "Article content"))
     }
 }
